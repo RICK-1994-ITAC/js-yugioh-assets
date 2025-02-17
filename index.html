@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/containers_and_frames.css">
+    <link rel="stylesheet" href="src/styles/buttons.css">
+    <script src="src/scripts/engine.js" defer></script>
+    <title>Yugi-Oh</title>
+</head>
+<body>
+
+    <audio loop id="audioBackg" >
+        <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="containerVideo">
+        <video class="video" autoplay loop muted>
+            <source src="src/assets/video/yugi.mp4" type="video/mp4"/>
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="contLeft framed-golden-2">
+            <div class="score frame">
+                <span id="score">Win:<span id="win"> 0 </span> | Lose: <span id="lose"> 0 </span> </span>
+            </div>
+
+            <div class="cardAvatar">
+                <img alt="" id="cardSelect">
+            </div>
+
+            <div class="datail frame">
+                <p id="cardName">Selecione </p>
+                <p id="cardType">uma carta</p>
+            </div>
+        </div>
+        <div class="contRight">
+
+            <div class="boxCards">
+
+                <div class="cards1 framed" id="computerCards"></div>
+
+                <div class="cardsVersus">
+                    <div class="versusTop">
+
+                        <div class="playerCards" >
+                            <img id="playerCardVersus" height="180px" width="125px">
+                        </div>
+
+                        <img src="src/assets/icons/millenium2.png" alt="" height="100px">
+
+                        <div class="computerCards" >
+                            <img height="180px" width="125px" id="computerCardVersus">
+                        </div>
+
+                    </div>
+
+                    <div class="versusBottom">
+                        <button id="nextDuel" class="rpgui-button">GANHOU</button>
+                    </div>
+                </div>
+
+                <div class="cards1 framed" id="playerCards"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <dialog>
+        <div class="vencedor framed">player venceu</div>
+        <button class="rpgui-button">Next Duel</button>
+    </dialog>
+</body>
+</html>
